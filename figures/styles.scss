@@ -1,0 +1,88 @@
+// variables
+
+$blue-base: #23263d;
+$blue-light: #323652;
+$blue-dark: #1f2336;
+$gold: #ffc576;
+$white: #ffffff;
+$white-blue: darken($white, 3%);
+
+$heading-margin: 10px 0;
+/* body styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.4rem;
+  background-color: $blue-light;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+$headings: (
+  h1: 24px,
+  h2: 18px,
+  h3: 16px,
+  h4: 14px,
+);
+
+@each $heading, $size in $headings {
+  #{$heading} {
+    font-size: $size;
+    font-weight: bold;
+    margin: $heading-margin;
+  }
+}
+
+.container {
+  background-color: $white-blue;
+  width: 80%;
+  height: 80vh;
+  margin: 0 auto;
+  border-radius: 30px;
+  padding: 30px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  box-shadow: 0px 0px 20px 2px $blue-dark;
+  section {
+    margin: 30px 0;
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  input {
+    margin: 10px 0;
+    font-size: 1.4rem;
+    padding: 5px 15px;
+    border-radius: 10px;
+    border: $gold 1px solid;
+    outline: none;
+  }
+  input::placeholder {
+    opacity: 60%;
+  }
+  button {
+    width: 40%;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: $blue-light;
+    color: $white;
+  }
+}
