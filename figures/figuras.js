@@ -71,3 +71,30 @@ function calcularPerimetroCirculo() {
   let perimetro = perimetroCirculo(value);
   alert((Math.round(perimetro * 10) / 10).toFixed(2));
 }
+
+function calcularPerimetroTriangulo() {
+  let inputTriangulo1 = document.getElementById("inputTriangulo1"),
+    lado1 = Number(inputTriangulo1.value);
+  let inputTriangulo2 = document.getElementById("inputTriangulo2"),
+    lado2 = Number(inputTriangulo2.value);
+  let inputTriangulo3 = document.getElementById("inputTriangulo3"),
+    base = Number(inputTriangulo3.value);
+  let perimetro = perimetroTriangulo(lado1, lado2, base);
+  alert(perimetro);
+}
+
+function calcularAlturaTriangulo() {
+  let inputTriangulo1 = document.getElementById("inputTriangulo1"),
+    lado1 = Number(inputTriangulo1.value);
+  let inputTriangulo2 = document.getElementById("inputTriangulo2"),
+    lado2 = Number(inputTriangulo2.value);
+  let inputTriangulo3 = document.getElementById("inputTriangulo3"),
+    base = Number(inputTriangulo3.value);
+  let baseParaLaAltura = base / 2;
+  if (lado1 === lado2) {
+    altura = Math.sqrt(Math.pow(lado1, 2) - Math.pow(base / 2, 2));
+    console.log(altura);
+  } else {
+    alert("no soy un triangulo isoceles");
+  }
+}

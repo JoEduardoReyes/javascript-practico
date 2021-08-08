@@ -61,23 +61,31 @@
         </form>
       </section>
       <!-- Triangulo -->
-      <section class="square">
+      <section class="triangle">
         <h2>Calcula el areas y perimetro de un cuadrado</h2>
         <form>
-          <label for="inputCuadrado">
-            Escribe cuanto miden los lados de tu cuadrado
-          </label>
+          <label> Escribe cuanto miden los lados de tu cuadrado </label>
           <input
-            id="inputCuadrado"
+            id="inputTriangulo1"
             type="number"
-            placeholder="Escribe la media de tu cuadrado en numeros"
+            placeholder="Primer lado de tu triangulo"
           />
-          <div class="buttons-square">
-            <button type="button" onclick="calcularPerimetroCuadrado()">
+          <input
+            id="inputTriangulo2"
+            type="number"
+            placeholder="Segundo lado de tu triangulo"
+          />
+          <input
+            id="inputTriangulo3"
+            type="number"
+            placeholder="Base de tu triangulo"
+          />
+          <div class="buttons-triangulo">
+            <button type="button" onclick="calcularPerimetroTriangulo()">
               Calcular perimetro
             </button>
-            <button type="button" onclick="calcularAreaCuadrado()">
-              Calcular Area
+            <button type="button" onclick="calcularAlturaTriangulo()">
+              Calcular altura
             </button>
           </div>
         </form>
