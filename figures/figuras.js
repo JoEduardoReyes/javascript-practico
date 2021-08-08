@@ -41,35 +41,40 @@ function calcularPerimetroCuadrado() {
   let input = document.getElementById("inputCuadrado");
   let value = input.value;
   let perimetro = perimetroCuadrado(value);
-  alert(perimetro);
+  alert("El perimetro de tu cuadrado es " + perimetro);
 }
 
 function calcularAreaCuadrado() {
   let input = document.getElementById("inputCuadrado");
   let value = input.value;
   let area = areaCuadrado(value);
-  alert(area);
+  alert("El area del cuadrado es " + area);
 }
 
 function calcularDiametroCirculo() {
   let input = document.getElementById("inputCircle");
   let value = input.value;
   let diametro = diametroCirculo(value);
-  alert(diametro);
+  alert("El diametro del circulo es" + diametro);
 }
 
 function calcularAreaCirculo() {
   let input = document.getElementById("inputCircle");
   let value = input.value;
   let diametro = areaCirculo(value);
-  alert((Math.round(diametro * 10) / 10).toFixed(2));
+  alert(
+    "El area del cirsulo es " + (Math.round(diametro * 10) / 10).toFixed(2)
+  );
 }
 
 function calcularPerimetroCirculo() {
   let input = document.getElementById("inputCircle");
   let value = input.value;
   let perimetro = perimetroCirculo(value);
-  alert((Math.round(perimetro * 10) / 10).toFixed(2));
+  alert(
+    "EL perimetro del circulo es " +
+      (Math.round(perimetro * 10) / 10).toFixed(2)
+  );
 }
 
 function calcularPerimetroTriangulo() {
@@ -80,7 +85,7 @@ function calcularPerimetroTriangulo() {
   let inputTriangulo3 = document.getElementById("inputTriangulo3"),
     base = Number(inputTriangulo3.value);
   let perimetro = perimetroTriangulo(lado1, lado2, base);
-  alert(perimetro);
+  alert("El perimetro de del triangulo es " + perimetro);
 }
 
 function calcularAlturaTriangulo() {
@@ -90,10 +95,9 @@ function calcularAlturaTriangulo() {
     lado2 = Number(inputTriangulo2.value);
   let inputTriangulo3 = document.getElementById("inputTriangulo3"),
     base = Number(inputTriangulo3.value);
-  let baseParaLaAltura = base / 2;
   if (lado1 === lado2) {
     altura = Math.sqrt(Math.pow(lado1, 2) - Math.pow(base / 2, 2));
-    console.log(altura);
+    alert("La altura de tu triangulo es " + altura);
   } else {
     alert("no soy un triangulo isoceles");
   }
