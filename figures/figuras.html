@@ -13,7 +13,55 @@
         <h1>Figuras Geometricas</h1>
         <p>Este es el primer taller el curso practico de JavaScript</p>
       </header>
-      <section>
+      <!-- Cuadrado -->
+      <section class="square">
+        <h2>Calcula el areas y perimetro de un cuadrado</h2>
+        <form>
+          <label for="inputCuadrado">
+            Escribe cuanto miden los lados de tu cuadrado
+          </label>
+          <input
+            id="inputCuadrado"
+            type="number"
+            placeholder="Escribe la media de tu cuadrado en numeros"
+          />
+          <div class="buttons-square">
+            <button type="button" onclick="calcularPerimetroCuadrado()">
+              Calcular perimetro
+            </button>
+            <button type="button" onclick="calcularAreaCuadrado()">
+              Calcular Area
+            </button>
+          </div>
+        </form>
+      </section>
+      <!-- circulo -->
+      <section class="circle">
+        <h2>Calcula el areas y perimetro de un circulo</h2>
+        <form>
+          <label for="inputCircle">
+            Escribe cuanto miden el radio de tu circulo
+          </label>
+          <input
+            id="inputCircle"
+            type="number"
+            placeholder="Escribe la media de tu circulo en numeros"
+          />
+          <div class="buttons-circle">
+            <button type="button" onclick="calcularDiametroCirculo()">
+              Calcular Diametro
+            </button>
+            <button type="button" onclick="calcularAreaCirculo()">
+              Calcular Area
+            </button>
+            <button type="button" onclick="calcularPerimetroCirculo()">
+              Calcular perimetro
+            </button>
+          </div>
+        </form>
+      </section>
+      <!-- Triangulo -->
+      <section class="square">
         <h2>Calcula el areas y perimetro de un cuadrado</h2>
         <form>
           <label for="inputCuadrado">
