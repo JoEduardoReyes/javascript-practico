@@ -1,31 +1,5 @@
 @import "../styles/global";
 
-form {
-  display: flex;
-  flex-direction: column;
-  input {
-    margin: 10px 0;
-    font-size: 1.4rem;
-    padding: 5px 15px;
-    border-radius: 10px;
-    border: $gold 1px solid;
-    outline: none;
-  }
-  input::placeholder {
-    opacity: 60%;
-  }
-  button {
-    width: 40%;
-    padding: 10px 15px;
-    margin-bottom: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: $blue-light;
-    color: $white;
-    cursor: pointer;
-  }
-}
-
 .triangle {
   form {
     display: grid;
