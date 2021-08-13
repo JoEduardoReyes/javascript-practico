@@ -1,32 +1,27 @@
-const lista = [100, 200, 300, 600, 400000, 800];
+// const lista = [100, 200, 300, 600, 4000, 800, 8, 56];
 
-const mitadLista = parseInt(lista.length / 2);
+function calCularMediana(lista) {
+  let mediana;
+  const mitadLista = parseInt(lista.length / 2);
 
-function esPar(numerito) {
-  if (numerito % 2 === 0) {
-    return true;
-  } else {
-    return false;
-  }
-}
-
-function calcularMediaAritmetica(lista1) {
-  const sumaLista = lista1.reduce(function (valorAcumulado = 0, nuevoElemento) {
-    return valorAcumulado + nuevoElemento;
+  lista.sort(function (a, b) {
+    return a - b;
   });
 
-  const promedioLista = sumaLista / lista1.length;
+  function esPar(numerito) {
+    if (numerito % 2 === 0) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 
-  return promedioLista;
-}
-
-let mediana;
-
-if (esPar(lista.length)) {
-  const elemento1 = lista[mitadLista - 1];
-  const elemento2 = lista[mitadLista];
-  const promedioDeElementos = calcularMediaAritmetica([elemento1, elemento2]);
-  mediana = promedioDeElementos;
-} else {
-  mediana = lista[mitadLista];
+  if (esPar(lista.length)) {
+    const elemento1 = lista[mitadLista - 1],
+      elemento2 = lista[mitadLista];
+    mediana = (elemento1 + elemento2) / 2;
+  } else {
+    mediana = lista[mitadLista];
+  }
+  console.log(`La mediana de tu lista de numeros es ${mediana}`);
 }
