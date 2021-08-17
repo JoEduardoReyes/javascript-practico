@@ -77,5 +77,5 @@ guatemala.push({
 });
 guatemala.push({
   name: "Bill Gates",
-  salary: 100000000,
+  salary: 1000,
 });
