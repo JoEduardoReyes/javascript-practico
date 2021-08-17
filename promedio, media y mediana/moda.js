@@ -1,14 +1,22 @@
-function calcularMediaAritmetica(lista) {
-  // let sumaLista = 0;
-  // for (let i = 0; i < lista.length; i++) {
-  //   sumaLista1 = sumaLista + lista[i];
-  // }
+const lista1 = [1, 3, 2, 1, 4, 15, 12, 1, 4, 31, 21, 2, 3, 1, 3, 2, 2, 2];
 
-  const sumaLista = lista.reduce(function (valorAcumulado = 0, nuevoElemento) {
-    return valorAcumulado + nuevoElemento;
-  });
+const lista1Count = {};
 
-  const promedioLista = sumaLista / lista.length;
+lista1.map(function (elemento) {
+  if (lista1Count[elemento]) {
+    lista1Count[elemento] += 1;
+  } else {
+    lista1Count[elemento] = 1;
+  }
+});
 
-  return promedioLista;
-}
+const lista1Array = Object.entries(lista1Count).sort(function (
+  elementoA,
+  elementoB
+) {
+  return elementoA[1] - elementoB[1];
+});
+
+const moda = lista1Array[lista1Array.length - 1];
+
+console.log(`La moda de tu lista es ${moda[0]}`);
