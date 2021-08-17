@@ -1,5 +1,4 @@
 const lista1 = [1, 3, 4, 5, 6];
-const n = lista1.length;
 var mediaGeo;
 
 function calcularMediaGeo(lista) {
