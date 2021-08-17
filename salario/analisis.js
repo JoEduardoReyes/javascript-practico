@@ -43,3 +43,13 @@ console.log({
   medianaGeneralGt,
   medianaGtTop10,
 });
+
+// calcular el salario mas bajo y mas alto
+
+function calcularTops(lista) {
+  let topBajo = lista[0];
+  let topAlto = lista[lista.length - 1];
+  console.log(`El saltio mas bajo es ${topBajo} y el mas alto es ${topAlto}`);
+}
+
+calcularTops(salariosGtSorted);
